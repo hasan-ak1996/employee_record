@@ -1,0 +1,63 @@
+<div>
+    <a routerLink="/">< Back</a>
+    <h3>Employee Details</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <h5>
+                Name:
+            </h5>
+            <p>
+                {{employee?.name}}
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h5>
+                Department Name:
+            </h5>
+            <p>
+                {{employee?.departmentName}}
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h5>
+                Address:
+            </h5>
+            <p>
+                {{employee?.address}}
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h5>
+                Creation Time:
+            </h5>
+            <p>
+                {{ employee?.creationTime | date : "short" }}
+            </p>
+        </div>
+    </div>
+
+    <hr>
+    <div>
+        <h3>
+            Images
+        </h3>
+        <ngb-carousel *ngIf="employee?.employeeFiles && employee?.employeeFiles?.length != 0" [interval]="0">
+            <ng-template *ngFor="let image of employee?.employeeFiles" ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img class="slider-img" [src]="'https://'+image.fileUrl" alt="Random first slide" />
+                </div>
+                <div class="carousel-caption">
+                    <h3 class="img-name">{{image.fileName}}</h3>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+
+        <p *ngIf="employee?.employeeFiles?.length == 0" class="text-center">
+            There aren't images yet
+        </p>
+    </div>
+
+
+</div>

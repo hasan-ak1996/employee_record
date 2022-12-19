@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+.mat-form-field{
+    width: 100%;
+}
+
+.mat-form-field.mat-form-field-invalid .mat-form-field-label{
+    color: unset;
+}
+.mat-form-field.mat-form-field-invalid .mat-form-field-ripple{
+    background-color: unset;
+}
+.error-message{
+    color: red;
+}

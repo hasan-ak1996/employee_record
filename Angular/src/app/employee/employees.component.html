@@ -1,0 +1,71 @@
+<div>
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Employees</h3>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <button (click)="search()" class="btn btn-outline-secondary" type="button">search</button>
+              </div>
+              <input placeholder="Search" type="search" [(ngModel)]="filter.keyword" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+            </div>  
+        </div>
+        <div class="col-md-4 text-end">
+            <button class="btn btn-primary" routerLink="/add-employee" >Add Employee</button>
+        </div>
+    </div>
+
+  <table mat-table [dataSource]="employees" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="dateOfBirth">
+      <th mat-header-cell *matHeaderCellDef>dateOfBirth</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.dateOfBirth | date }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="address">
+      <th mat-header-cell *matHeaderCellDef>address</th>
+      <td mat-cell *matCellDef="let element">{{ element.address }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="departmentName">
+      <th mat-header-cell *matHeaderCellDef>departmentName</th>
+      <td mat-cell *matCellDef="let element">{{ element.departmentName }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="creationTime">
+      <th mat-header-cell *matHeaderCellDef>creationTime</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.creationTime | date : "short" }}
+      </td>
+    </ng-container>
+
+ <!-- Action Column -->
+ <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Actions </th>
+    <td mat-cell *matCellDef="let element" class="action-link"> 
+      <!-- [routerLink]="['/employee-details',element.id]" -->
+      <a [routerLink]="['/update-employee',element.id]" >Edit</a> | 
+      <a (click)="deleteEmployee($event,element.id)">Delete</a>  
+    </td>
+  </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns" (click)="selectedEmployee(row.id)"></tr>
+  </table>
+
+  <mat-paginator
+    [pageIndex]="filter.skipCount"
+    [pageSize]="filter.maxResult"
+    [length]="totalCount"
+    (page)="changePage($event)"
+    showFirstLastButtons
+    aria-label="Select page of periodic elements"
+  >
+  </mat-paginator>
+</div>

@@ -1,0 +1,54 @@
+<nav  id="sidebar" [ngClass]="isOpenSidebar ? 'active' : ''" 
+>
+    <div class="sidebar-header">
+        <h3>Bootstrap Sidebar</h3>
+        <strong>BS</strong>
+    </div>
+
+    <ul class="list-unstyled components">
+      <li
+      *ngFor="let item of menuItems"
+      >
+      <div *ngIf="isMenuItemVisible(item)" class="item-menu-div">
+        <a 
+        *ngIf="item.route && !item.children"
+        routerLink="{{item.route}}"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}"
+
+        >
+        <i class="{{item.icon}}"></i>
+        {{ item.label | translate }}
+        </a>
+
+        <a
+        *ngIf="!item.route && item.children"
+        data-bs-toggle="collapse" 
+        aria-expanded="false" 
+        class="dropdown-toggle"
+        [href]="'#'+item.label"
+      >
+        <i class="{{ item.icon }}"></i>
+          {{item.label}}
+
+
+      </a>
+      <ul class="collapse list-unstyled" 
+      id="{{item.label}}"
+      *ngIf="item.children"
+      >
+        <li *ngFor="let subItem of item.children">
+            <a 
+            routerLink="{{subItem.route}}"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}"
+            *ngIf="isMenuItemVisible(subItem)"
+            >{{subItem.label}}</a>
+        </li>
+    </ul>
+      </div>
+
+      </li>
+
+    </ul>
+</nav>

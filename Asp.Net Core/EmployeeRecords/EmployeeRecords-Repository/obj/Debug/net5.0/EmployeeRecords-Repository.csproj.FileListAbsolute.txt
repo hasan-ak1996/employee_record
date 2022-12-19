@@ -1,0 +1,15 @@
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Repository\bin\Debug\net5.0\EmployeeRecords-Repository.deps.json
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Repository\bin\Debug\net5.0\EmployeeRecords-Repository.dll
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Repository\bin\Debug\net5.0\EmployeeRecords-Repository.pdb
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Repository\bin\Debug\net5.0\EmployeeRecords-Domain.dll
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Repository\bin\Debug\net5.0\EmployeeRecords-Domain.pdb
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Repository\obj\Debug\net5.0\EmployeeRecords-Repository.csproj.AssemblyReference.cache
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Repository\obj\Debug\net5.0\EmployeeRecords-Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Repository\obj\Debug\net5.0\EmployeeRecords-Repository.AssemblyInfoInputs.cache
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Repository\obj\Debug\net5.0\EmployeeRecords-Repository.AssemblyInfo.cs
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Repository\obj\Debug\net5.0\EmployeeRecords-Repository.csproj.CoreCompileInputs.cache
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Repository\obj\Debug\net5.0\EmployeeRecords-Repository.csproj.CopyComplete
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Repository\obj\Debug\net5.0\EmployeeRecords-Repository.dll
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Repository\obj\Debug\net5.0\refint\EmployeeRecords-Repository.dll
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Repository\obj\Debug\net5.0\EmployeeRecords-Repository.pdb
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Repository\obj\Debug\net5.0\ref\EmployeeRecords-Repository.dll

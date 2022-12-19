@@ -1,0 +1,98 @@
+<div>
+    <a routerLink="/">< Back</a>
+    <h3>Add New Employee</h3>
+    <div>
+      <form id="empform" [formGroup]="employeeForm" (ngSubmit)="submit()" [noValidate]="true">
+        <div class="row">
+          <div class="col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>Name</mat-label>
+              <input
+                matInput
+                placeholder="Name"
+                type="text"
+                formControlName="name"
+              />
+            </mat-form-field>
+            <span class="error-message" *ngIf="isSubmitForm && employeeForm.controls.name?.errors?.required">
+              name is required
+            </span>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field appearance="fill">
+              <mat-label>Department</mat-label>
+              <mat-select formControlName="departmentId">
+                <mat-option
+                  *ngFor="let department of departments"
+                  [value]="department.id"
+                >
+                  {{ department.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field appearance="fill">
+              <mat-label>Date Of Birth</mat-label>
+              <input
+                matInput
+                [matDatepicker]="picker"
+                formControlName="dateOfBirth"
+              />
+           
+              <mat-datepicker-toggle
+                matIconSuffix
+                [for]="picker"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <span class="error-message" *ngIf="isSubmitForm && employeeForm.controls.dateOfBirth?.errors?.required">
+              Date Of Birth is required
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <mat-form-field class="example-full-width">
+              <mat-label>Address</mat-label>
+              <textarea matInput placeholder="Address" formControlName="address"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+  
+      </form>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Attachments:</h3>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <button (click)="file.click()" class="btn btn-primary">
+          Add Attachment
+        </button>
+        <input type="file" [hidden]="true" #file (change)="onChangeFile($event.target)" multiple accept="image/png, image/gif, image/jpeg">
+      </div>
+    </div>
+    <div class="row">
+      <div *ngFor="let imgItem of employee?.employeeFiles;let i=index;" class="col-md-2">
+        <div  class="position-relative">
+          <img class="employee-img" [src]="'https://'+imgItem.fileUrl">
+          <button class="remove-img-btn" (click)="removeOldImage(imgItem)">X</button>
+        </div>
+      </div>
+      <div *ngFor="let img of selectedImagesUrls;let i=index;" class="col-md-2">
+        <div  class="position-relative">
+          <img class="employee-img" [src]="img">
+          <button class="remove-img-btn" (click)="removeNewImage(i)">X</button>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="text-center" *ngIf="selectedImagesUrls.length == 0 && employee?.employeeFiles?.length == 0">
+      There aren't images yet
+    </p>
+    <button class="btn btn-primary" type="submit" form="empform">Save</button>
+  </div>
+  

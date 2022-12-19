@@ -1,0 +1,17 @@
+<div class="wrapper" >
+  <!-- Sidebar  -->
+
+  <app-side-bar [isOpenSidebar]="isOpenSidebar"></app-side-bar>
+
+  <!-- Page Content  -->
+  <div id="content">
+
+    <app-nav-bar (toggleSidebarEvent)="toggleSidebar($event)"></app-nav-bar>
+
+
+      <router-outlet></router-outlet>
+
+
+     
+  </div>
+</div>

@@ -1,0 +1,12 @@
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Domain\bin\Debug\net5.0\EmployeeRecords-Domain.deps.json
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Domain\bin\Debug\net5.0\EmployeeRecords-Domain.dll
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Domain\bin\Debug\net5.0\EmployeeRecords-Domain.pdb
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Domain\obj\Debug\net5.0\EmployeeRecords-Domain.csproj.AssemblyReference.cache
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Domain\obj\Debug\net5.0\EmployeeRecords-Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Domain\obj\Debug\net5.0\EmployeeRecords-Domain.AssemblyInfoInputs.cache
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Domain\obj\Debug\net5.0\EmployeeRecords-Domain.AssemblyInfo.cs
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Domain\obj\Debug\net5.0\EmployeeRecords-Domain.csproj.CoreCompileInputs.cache
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Domain\obj\Debug\net5.0\EmployeeRecords-Domain.dll
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Domain\obj\Debug\net5.0\refint\EmployeeRecords-Domain.dll
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Domain\obj\Debug\net5.0\EmployeeRecords-Domain.pdb
+C:\Users\Laser\Desktop\EmployeeRecordsProject\Asp.Net Core\EmployeeRecords\EmployeeRecords-Domain\obj\Debug\net5.0\ref\EmployeeRecords-Domain.dll
