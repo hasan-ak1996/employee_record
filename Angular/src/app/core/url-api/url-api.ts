@@ -1,12 +1,6 @@
 const UrlApi = {
      BaseUrl : 'https://localhost:44334',
 }
-//////////Auth///////////
-export const Auth = {
-     login : UrlApi.BaseUrl + '/api/TokenAuth/Authenticate',
-     forgetPassword : UrlApi.BaseUrl + '/api/services/app/Account/ForgetPassword',
-     restPassword : UrlApi.BaseUrl + '/api/services/app/Account/ResetNewPassword'
-}
 ///////Departments//////////
 export const Departments = {
      GetAll: UrlApi.BaseUrl + '/api/Department/GetAll',

@@ -9,7 +9,7 @@
       <li
       *ngFor="let item of menuItems"
       >
-      <div *ngIf="isMenuItemVisible(item)" class="item-menu-div">
+      <div class="item-menu-div">
         <a 
         *ngIf="item.route && !item.children"
         routerLink="{{item.route}}"
@@ -42,7 +42,7 @@
             routerLink="{{subItem.route}}"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{exact: true}"
-            *ngIf="isMenuItemVisible(subItem)"
+           
             >{{subItem.label}}</a>
         </li>
     </ul>

@@ -25,7 +25,6 @@ export class EmployeeDetailsComponent implements OnInit {
           this.employee = res;
         })
       }else{
-        console.log("not number");
       }
     });
   }

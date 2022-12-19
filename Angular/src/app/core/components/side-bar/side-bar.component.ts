@@ -1,6 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { PermissionCheckerService } from '../../auth/permission-checker.service';
 import { MenuItem } from '../../layout/menu-item';
 
 @Component({
@@ -10,8 +8,7 @@ import { MenuItem } from '../../layout/menu-item';
 })
 export class SideBarComponent implements OnInit {
 
-  constructor(private permissionCheckerService: PermissionCheckerService,
-    private translateService: TranslateService) { }
+  constructor() { }
   @Input() isOpenSidebar = false;
   menuItems!: MenuItem[];
 
@@ -21,49 +18,9 @@ export class SideBarComponent implements OnInit {
 
   getMenuItems(): MenuItem[] {
     return [
-        new MenuItem('Employees', '/', 'fa fa-users'),
-        new MenuItem(
-          'Users',
-            '/example',
-            'fa fa-users',
-            'Pages.Users'
-        ),
-        new MenuItem(
-          'Roles',
-            '/Roles',
-            'fa fa-theater-masks',
-            'Pages.Roles'),
-
-            new MenuItem(
-              'Contact',
-                '',
-                'fa fa-theater-masks',
-                'Pages.Roles',[
-                  new MenuItem(
-                    'example',
-                      '/example',
-                      'fa fa-theater-masks',
-                      'Pages.Users'),
-                      new MenuItem(
-                        'Contact2',
-                          '/Contact2',
-                          'fa fa-theater-masks',
-                          'Pages.Roles'),
-                          new MenuItem(
-                            'Contact3',
-                              '/Contact3',
-                              'fa fa-theater-masks',
-                              'Pages.Roles'),
-
-                ]),
-    ];
+        new MenuItem('Employees', '/', 'fa fa-users')];
   }
 
 
-  isMenuItemVisible(item: MenuItem){
-    if(!item.permissionName){
-      return true;
-    }
-    return this.permissionCheckerService.isGuard(item.permissionName);
-  }
+
 }

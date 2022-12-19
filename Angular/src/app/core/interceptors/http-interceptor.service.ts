@@ -28,7 +28,6 @@ export class HttpInterceptorService implements HttpInterceptor{
       return next.handle(req).pipe(
         // retry(2),
         catchError((error: HttpErrorResponse) => {
-          console.log(error);
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
